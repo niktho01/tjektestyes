@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gentleman barberingssæt - Kystnær</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Spring til hovedindhold</a>
+
+    <!-- Topbar med slider -->
+<aside class="topbar" id="topbar" aria-label="Tilbud og nyheder">
+    <button type="button" class="arrow arrow-left" onclick="previousSlide()" aria-label="Forrige tilbud">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+    </button>
+    
+    <div class="topbar-slider" aria-live="polite" aria-atomic="true">
+        <div class="topbar-slide active">Fri fragt i 6100 ved køb over 149,-</div>
+        <div class="topbar-slide">Fri fragt til DAO Pakkeshop ved køb over 499,-</div>
+    </div>
+    
+    <button type="button" class="arrow arrow-right" onclick="nextSlide()" aria-label="Næste tilbud">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+    </button>
+</aside>
+
+    <header class="transparent-header dark-nav">
+    <!-- Hamburger Menu Button (kun synlig på mobil) -->
+    <button type="button" class="mobile-menu-toggle" aria-label="Åbn menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+
+    <div class="header-left">
+        <a href="index.html" aria-label="Gå til forsiden">
+            <img src="image/logokyst.png" alt="Kystnær Logo" class="logo-image">
+        </a>
+
+        <nav aria-label="Hovednavigation" class="main-nav">
+            <!-- Primære links (altid synlige på mobil) -->
+            <div class="primary-nav-links">
+                <a href="alleprodukter.html">Shop</a>
+                <a href="alleprodukter.html">Serier</a>
+                <a href="alleprodukter.html">Forkælelsespakker</a>
+            </div>
+            
+            <!-- Sekundære links (i dropdown på mobil) -->
+            <div class="secondary-nav-links">
+                <a href="#">Brands</a>
+                <a href="#">Om Kystnær</a>
+                <a href="#">Blog & Guides</a>
+                <a href="#">Kontakt</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="icons">
+        <button type="button" class="icon" aria-label="Indkøbskurv">
+            <img src="image/cart-icon.png" alt="Indkøbskurv" class="icon-image">
+        </button>
+        <button type="button" class="icon" aria-label="Søg">
+            <img src="image/search-icon.png" alt="Søg" class="icon-image">
+        </button>
+    </div>
+</header>
+
+    <!-- Hero section Produktside -->
+    <main id="main-content">
+        <section class="Produktsidesection" aria-labelledby="product-title">
+            <img src="image/strandlion.jpg" alt="Gentleman barberingssæt produktbillede" class="produktside-image">
+            <div class="produktside-text">
+                <h1 id="product-title">Gentleman barberingssæt</h1>
+                <p class="pricetag">475,00 Kr</p>
+                
+                <!-- På lager indikator -->
+                <div class="stock-status" role="status" aria-live="polite">
+                    <span class="stock-dot" aria-hidden="true"></span>
+                    <span class="stock-text">På lager</span>
+                </div>
+                
+                <!-- Mængde selector -->
+                <label for="quantity" class="quantity-label">Mængde</label>
+                <div class="quantity-selector" role="group" aria-label="Vælg mængde">
+                    <button type="button" class="quantity-btn" onclick="decreaseQuantity()" aria-label="Reducer mængde">−</button>
+                    <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="99" aria-label="Antal produkter">
+                    <button type="button" class="quantity-btn" onclick="increaseQuantity()" aria-label="Forøg mængde">+</button>
+                </div>
+                
+                <p class="moms">Moms inkluderet. Forsendelse beregnes ved kassen</p>
+                <p>"Du får effektive produkter, der forkæler dig og samtidig passer på naturen, som vi elsker. Vores håndlavede sæber, shampoo og balsam i fast form er inspireret af kysten, hvor jeg selv bor – og fyldt med lokale råvarer som tang, hyben og havtorn."</p>
+
+                <button type="button" class="btn" aria-label="Læg Gentleman barberingssæt i kurv">Læg i Kurv</button>
+                <button type="button" class="btn" aria-label="Køb Gentleman barberingssæt nu">Køb Nu</button>
+
+                <!-- Fragt progress bar -->
+<div class="shipping-progress" role="region" aria-label="Fragtinformation">
+    <div class="shipping-info">
+        <img src="image/truck-icon.png" alt="" class="shipping-icon" aria-hidden="true">
+        <span class="shipping-text">Tilføj for 499,00 kr mere for at få fri fragt</span>
+    </div>
+    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Fremskridt mod fri fragt">
+        <div class="progress-fill" style="width: 0%;"></div>
+    </div>
+</div>
+
+                <!-- Produkt beskrivelse -->
+                <div class="product-description">
+                    <h2>Naturlige produkter til den ægte gentleman</h2>
+                    <p>Til ham – manden der har alt, den moderne gentleman og manden, der sætter pris på den gode, naturlige rutine omkring barbering. Gentleman gavesæt med tang er skabt til manden der ønsker en enkel og effektiv rutine med naturlige ingredienser og et rent udtryk.</p>
+                    <p>Pakken kombinerer produkter til både hår og barbering og giver en naturlig og forfriskende oplevelse, der efterlader huden blød og håret frisk.</p>
+                    <p><strong>Gentleman gavesæt indeholder:</strong></p>
+                    <ul>
+                        <li>Tang Shampoo Bar</li>
+                        <li>Tang Shaving Bar</li>
+                        <li>Barberkost</li>
+                        <li>Barberskraber</li>
+                        <li>2 stk. Loofah Sæbeholdere</li>
+                        <li>2 stk. Rejsebeholder i sort</li>
+                        
+                    </ul>
+                    <p><em>Den perfekte gaveidé – eller til dig, som gerne vil stå helt skarp med de bedste produkter.</em></p>
+                </div>
+            </div>
+        </section>
+ <!-- How to Use Section -->
+        <section class="how-to-use-section" aria-labelledby="how-to-use-heading">
+            <div class="how-to-use-text">
+                <h2 id="how-to-use-heading">How to Use</h2>
+                <p><strong>Tang Shampoo Bar:</strong> Gør håret vådt og gnid shampoo baren direkte ind i håret. Massér shampoen godt ind i hovedbunden og skyl grundigt ud. Gentag om nødvendigt.</p>
+                <p><strong>Tang Shaving Bar:</strong> Fugt barberkost og gnid den mod shaving baren for at skabe et rigt skum. Påfør skummet i ansigtet og barber som sædvanligt. Skyl af med varmt vand.</p>
+                <p><strong>Barberkost:</strong> Brug barberkost til at arbejde shaving baren op til et blødt skum.</p>
+                <p><strong>Loofah Sæbeholdere:</strong> Opbevar dine bars på loofah sæbeholderne for at holde dem tørre mellem brug og forlænge deres levetid.</p>
+                <p><strong>Rejsebeholdere:</strong> Perfekt til at opbevare dine bars når du er på farten - holder dem tørre og beskyttede.</p>
+            </div>
+            <img src="image/founder.jpg" alt="Sådan bruger du produktet" class="how-to-use-image">
+        </section>
+
+        <!-- Ingredients Section -->
+       <section class="ingredients-section" aria-labelledby="ingredients-heading">
+    <img src="image/ingredienser.jpg" alt="Naturlige ingredienser fra kysten" class="ingredients-image">
+    <div class="ingredients-text">
+        <h2 id="ingredients-heading">Ingredienser</h2>
+        <p><strong>Tang Shampoo Bar:</strong> Sodium cocoyl isethionate, Cocamidopropyl betaine, Cocos nucifera* (Kokosolie), Panthenol (Provitamin B5), Hydrolyzed wheat protein (Hvedeprotein), Brassica oleracea italica* (Broccoliolie), Triethyl citrate, Phenoxyethanol, Ethylhexyl glycerin, French green clay ultra ventilated (Grøn ler), Ascophyllum nodosum (Tang), Melaleuca alternifolia (Tea tree oil), Mentha piperita (Pebermynteolie).</p>
+        <p><strong>Tang Shaving Bar:</strong> Hydrogenated soyabean* (Soya smør), Aqua, Cocos nucifera* (Kokosolie), Sodium hydroxide, Theobroma cacao* (Kakaosmør), Ricinus communis (Ricinusolie), Montmorillonite clay (Bentonit-ler), Vetiveria zizanoides root oil (Vetiverolie), Melaleuca alternifolia (Tea Tree olie), Chlorella vulgaris (Chlorellapulver).</p>
+        <p class="ingredients-note"><em>*Økologisk. Produkterne er fremstillet uden parabener og sulfater.</em></p>
+    </div>
+</section>
+        <!-- More Products -->
+        <section class="products-section" aria-labelledby="related-products-heading">
+            <h2 id="related-products-heading" class="section-title">Andre købte også</h2>
+            <div class="products-grid">
+                <article class="product-card">
+                    <img src="image/Shampoo.jpg" alt="Aktivt Kul Shampoobar" class="product-image">
+                    <h3 class="product-title">Aktivt Kul Shampoobar - Naturligt produkt til fedtet har og irriteret hovedbund</h3>
+                    <p class="product-price">140,00 DKK</p>
+                </article>
+                <article class="product-card">
+                    <img src="image/hudpleje.jpg" alt="Body Scrub" class="product-image">
+                    <h3 class="product-title">Body Scrub Salt - Fjerner døde hudceller og virker super godt mod tør hud </h3>
+                    <p class="product-price">140,00 DKK</p>
+                </article>
+                <article class="product-card">
+                    <img src="image/Skrabere.png" alt="Barberhoveder" class="product-image">
+                    <h3 class="product-title">Barberhoveder - Ekstra barberhoveder til vores skraber til frisk barbering</h3>
+                    <p class="product-price">55,00 DKK</p>
+                </article>
+                <article class="product-card">
+                    <img src="image/rejsebeholder.png" alt="Rejsebeholder" class="product-image">
+                    <h3 class="product-title">Sort Rejsebeholder - Tag dine sæbebarer med på rejsen uden at det løber ud i tasken</h3>
+                    <p class="product-price">45,00 DKK</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Product Categories Slider -->
+        <section class="product-categories-section" aria-labelledby="categories-heading">
+            <h2 id="categories-heading" class="section-title">Vores mest populære kategorier</h2>
+            <div class="categories-slider">
+                <div class="category-cards-container" id="categoryCardsContainer" role="region" aria-label="Produktkategorier">
+                    
+                    <!-- Kategori 1 - Hudpleje -->
+                    <a href="alleprodukter.html" class="category-card-link" aria-label="Gå til alle vores produkter">
+                        <article class="category-card">
+                            <img src="image/hudpleje.jpg" alt="Hud produkter" class="category-image">
+                            <div class="category-overlay">
+                                <h3 class="category-title">Hudprodukter</h3>
+                                <p class="category-description">Naturlige hudprodukter - håndlavet med kystens råvarer og naturlige ingredienser i fokus.</p>
+                            </div>
+                        </article>
+                    </a>
+                    
+                    <!-- Kategori 2 - Hårpleje -->
+                    <a href="alleprodukter.html" class="category-card-link" aria-label="Gå til alle vores produkter">
+                        <article class="category-card">
+                            <img src="image/Shampoo.jpg" alt="Hår produkter" class="category-image">
+                            <div class="category-overlay">
+                                <h3 class="category-title">Hårprodukter</h3>
+                                <p class="category-description">Effektive produkter til dit hår - håndlavet med kystens råvarer og naturlige ingredienser i fokus.</p>
+                            </div>
+                        </article>
+                    </a>
+                    
+                    <!-- Kategori 3 - Tilbehør -->
+                    <a href="alleprodukter.html" class="category-card-link" aria-label="Gå til alle vores produkter">
+                        <article class="category-card">
+                            <img src="image/tilbehoer.jpg" alt="Tilbehør" class="category-image">
+                            <div class="category-overlay">
+                                <h3 class="category-title">Tilbehør</h3>
+                                <p class="category-description">Tilbehør til dig og dit hjem, der fuldender din personlige pleje rutine og din hverdag.</p>
+                            </div>
+                        </article>
+                    </a>
+                    
+                    <!-- Kategori 4 - Forkæl dig Selv -->
+                    <a href="alleprodukter.html" class="category-card-link" aria-label="Gå til alle vores produkter">
+                        <article class="category-card">
+                            <img src="image/forkaeldigselv.jpg" alt="Forkælelsesprodukter" class="category-image">
+                            <div class="category-overlay">
+                                <h3 class="category-title">Forkæl dig Selv</h3>
+                                <p class="category-description">Skånsom og mild pleje til de mindste - håndlavet med naturlige ingredienser.</p>
+                            </div>
+                        </article>
+                    </a>
+                    
+                    <!-- Kategori 5 - Gavesæt -->
+                    <a href="alleprodukter.html" class="category-card-link" aria-label="Gå til alle vores produkter">
+                        <article class="category-card">
+                            <img src="image/strandlion.jpg" alt="Gavesæt" class="category-image">
+                            <div class="category-overlay">
+                                <h3 class="category-title">Gavesæt</h3>
+                                <p class="category-description">Smukke gavesæt med udvalgte produkter - perfekte til enhver anledning.</p>
+                            </div>
+                        </article>
+                    </a>
+                    
+                </div>
+            </div>
+            <!-- Custom scrollbar -->
+            <div class="custom-scrollbar" id="customScrollbar">
+                <div class="scrollbar-thumb" id="scrollThumb" tabindex="0" role="slider" aria-label="Rul gennem kategorier" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </section>
+        <!-- Trustpilot Reviews Section -->
+        <section class="trustpilot-section" aria-labelledby="reviews-heading">
+            <div class="trustpilot-container">
+                <div class="trustpilot-header">
+                    <h2 id="reviews-heading">4,9 stjerner på Trustpilot</h2>
+                    <p>Mere end 285 anmeldelser - læs dem <a href="#" class="trustpilot-link">her</a></p>
+                </div>
+
+                <div class="reviews-grid">
+                    <article class="review-card review-large">
+                        <h3 class="visually-hidden">Anmeldelse fra Kim</h3>
+                        <div class="stars" role="img" aria-label="5 ud af 5 stjerner">★★★★★</div>
+                        <p class="review-text">"Jeg vidste ikke hvad en shaving bar var, men jeg må sige det er et produkt jeg kan anbefale"</p>
+                        <p class="review-author">- Kim</p>
+                    </article>
+
+                    <article class="review-card review-small">
+                        <h3 class="visually-hidden">Anmeldelse fra Morten</h3>
+                        <div class="stars" role="img" aria-label="5 ud af 5 stjerner">★★★★★</div>
+                        <p class="review-text">"Enhver mand med respekt for sig selv, der går op i sit skæg burde eje dette sæt."</p>
+                        <p class="review-author">- Morten</p>
+                    </article>
+
+                    <article class="review-card review-small">
+                        <h3 class="visually-hidden">Anmeldelse fra Peter</h3>
+                        <div class="stars" role="img" aria-label="5 ud af 5 stjerner">★★★★★</div>
+                        <p class="review-text">"Et barberingssæt der virkelig er brugbart, jeg er glad for dette produkt"</p>
+                        <p class="review-author">- Peter</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+ <!-- Newsletter Section -->
+<section class="newsletter-section">
+    <div class="newsletter-container">
+        <div class="newsletter-content">
+            <h2>Få 10 % rabat på dit første køb</h2>
+            <p>Tilmeld dig vores nyhedsbrev og få en rabatkode på 10 % til dit første køb. Du bliver også den første til at modtage tilbud, nyheder og tips til hud- og hår.</p>
+        </div>
+        <form class="newsletter-form-inline" aria-label="Tilmeld nyhedsbrev">
+            <input type="email" id="newsletter-email-inline" name="email" placeholder="Din email ..." aria-label="E-mail adresse" required>
+            <button type="submit">Tilmeld</button>
+        </form>
+    </div>
+</section>
+    </main>
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+    <h2>Kystnær</h2>
+    <p>Håndlavede shampoo- og sæbebarer fra den danske kyst.</p>
+    <p>Ørbyhage 96<br>6100 Haderslev</p>
+    <p>Tlf: +45 71 72 31 91<br>
+    <a href="mailto:kontakt@kystnaer.com">kontakt@kystnaer.com</a></p>
+</div>
+        
+        <div class="footer-section">
+            <h2>Produkter</h2>
+            <nav aria-label="Produktnavigation">
+                <a href="#">Shampoobarer</a>
+                <a href="#">Balsambarer</a>
+                <a href="#">Sæbebarer</a>
+                <a href="#">Baberingsbarer</a>
+                <a href="#">Tilbehør</a>
+                <a href="#">Pakker</a>
+            </nav>
+        </div>
+        
+        <div class="footer-section">
+            <h2>Information</h2>
+            <nav aria-label="Informationsnavigation">
+                <a href="#">Om Kystnær</a>
+                <a href="#">Find forhandler</a>
+                <a href="#">Bliv forhandler</a>
+                <a href="#">B2B Login</a>
+                <a href="#">Levering- og handelsbetingelser</a>
+                <a href="#">Persondatapolitik</a>
+                <a href="#">LAG og kommisionen</a>
+            </nav>
+        </div>
+        
+        <div class="footer-section">
+            <h2>Følg os</h2>
+            <nav aria-label="Sociale medier">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Youtube</a>
+                <a href="#">Blog</a>
+                <a href="#">Nyhedsbrev</a>
+            </nav>
+        </div>
+    </div>
+        <div class="footer-bottom">
+            <p>© 2025 Kystnær. Alle rettigheder forbeholdes. | CVR: XXXXXXXX</p>
+        </div>
+    </footer>
+
+    <!-- Link til JavaScript -->
+    <script src="js/slider.js"></script>
+</body>
+</html>

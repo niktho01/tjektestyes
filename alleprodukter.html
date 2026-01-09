@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkter - Kystnær</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="produktliste-side">
+    <!-- Skip Navigation Link - WCAG 2.4.1 -->
+    <a href="#main-content" class="skip-link">Spring til hovedindhold</a>
+
+   <!-- Topbar med slider -->
+<aside class="topbar" id="topbar" aria-label="Tilbud og nyheder">
+    <button type="button" class="arrow arrow-left" onclick="previousSlide()" aria-label="Forrige tilbud">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+    </button>
+    
+    <div class="topbar-slider" aria-live="polite" aria-atomic="true">
+        <div class="topbar-slide active">Fri fragt i 6100 ved køb over 149,-</div>
+        <div class="topbar-slide">Fri fragt til DAO Pakkeshop ved køb over 499,-</div>
+    </div>
+    
+    <button type="button" class="arrow arrow-right" onclick="nextSlide()" aria-label="Næste tilbud">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+    </button>
+</aside>
+
+   <header class="transparent-header dark-nav">
+    <!-- Hamburger Menu Button (kun synlig på mobil) -->
+    <button type="button" class="mobile-menu-toggle" aria-label="Åbn menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+
+    <div class="header-left">
+        <a href="index.html" aria-label="Gå til forsiden">
+            <img src="image/logokyst.png" alt="Kystnær Logo" class="logo-image">
+        </a>
+
+        <nav aria-label="Hovednavigation" class="main-nav">
+            <!-- Primære links (altid synlige på mobil) -->
+            <div class="primary-nav-links">
+                <a href="alleprodukter.html">Shop</a>
+                <a href="alleprodukter.html">Serier</a>
+                <a href="alleprodukter.html">Forkælelsespakker</a>
+            </div>
+            
+            <!-- Sekundære links (i dropdown på mobil) -->
+            <div class="secondary-nav-links">
+                <a href="#">Brands</a>
+                <a href="#">Om Kystnær</a>
+                <a href="#">Blog & Guides</a>
+                <a href="#">Kontakt</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="icons">
+        <button type="button" class="icon" aria-label="Indkøbskurv">
+            <img src="image/cart-icon.png" alt="Indkøbskurv" class="icon-image">
+        </button>
+        <button type="button" class="icon" aria-label="Søg">
+            <img src="image/search-icon.png" alt="Søg" class="icon-image">
+        </button>
+    </div>
+</header>
+
+   <!-- More Products -->
+   <main id="main-content">
+        <section class="products-section" aria-labelledby="products-heading">
+            <h1 id="products-heading" class="section-title">Vores produkter</h1>
+            <div class="products-grid">
+                <!-- Produkt 1 -->
+                <article class="product-item" aria-labelledby="product-1-title">
+                    <div class="product-badge">BARBERING</div>
+                    <a href="produktside.html" aria-label="Se mere om Gentlemansæt">
+                        <img src="image/strandlion.jpg" alt="Gentleman pakke vist på strand" class="product-image">
+                    </a>
+                    <a href="produktside.html" class="product-link">
+                        <h2 id="product-1-title" class="product-title">Gentlemansæt - Alt du skal bruge til barbering</h2>
+                    </a>
+                    <p class="product-description">Effektive produkter, til den optimale barbering</p>
+                    <div class="product-rating">
+                        <span class="stars" role="img" aria-label="5 ud af 5 stjerner">★★★★★</span>
+                        <span class="rating-count">(45)</span>
+                    </div>
+                    <p class="product-price">475,00 kr.</p>
+                    <button type="button" class="add-to-bag-btn" aria-label="Tilføj Gentlemansæt til kurv">TILFØJ TIL KURV</button>
+                </article>
+
+                <!-- Produkt 2 -->
+                <article class="product-item" aria-labelledby="product-2-title">
+                    <div class="product-badge">TIL DIN SKRABER</div>
+                    <a href="produktside.html" aria-label="Barberhoveder til skraber">
+                        <img src="image/Skrabere.png" alt="Barberhoveder" class="product-image">
+                    </a>
+                    <a href="produktside.html" class="product-link">
+                        <h2 id="product-2-title" class="product-title">Barberhoveder - til vores Kystnær 
+                            skraber</h2>
+                    </a>
+                    <p class="product-description">Udskift barberbladene i din skraber for frisk barbering</p>
+                    <div class="product-rating">
+                        <span class="stars" role="img" aria-label="5 ud af 5 stjerner">★★★★★</span>
+                        <span class="rating-count">(58)</span>
+                    </div>
+                    <p class="product-price">55,00 kr.</p>
+                    <button type="button" class="add-to-bag-btn" aria-label="Tilføj Barberhoveder til kurv">TILFØJ TIL KURV</button>
+                </article>
+
+                <!-- Produkt 3 -->
+                <article class="product-item" aria-labelledby="product-3-title">
+                    <div class="product-badge">TØR HUD</div>
+                    <a href="produktside.html" aria-label="Salt bodyscrub">
+                        <img src="image/hudpleje.jpg" alt="Salt Bodyscrub" class="product-image">
+                    </a>
+                    <a href="produktside.html" class="product-link">
+                        <h2 id="product-3-title" class="product-title">Salt bodyscrub - fjern tør hud og døde hudceller</h2>
+                    </a>
+                    <p class="product-description">God bodyscrub til at rengøre huden, og samtidig fjerne døde hudceller</p>
+                    <div class="product-rating">
+                        <span class="stars" role="img" aria-label="5 ud af 5 stjerner">★★★★★</span>
+                        <span class="rating-count">(32)</span>
+                    </div>
+                    <p class="product-price">120,00 kr.</p>
+                    <button type="button" class="add-to-bag-btn" aria-label="Tilføj Havtorn Balsam til kurv">TILFØJ TIL KURV</button>
+                </article>
+
+                <!-- Produkt 4 -->
+                <article class="product-item" aria-labelledby="product-4-title">
+                    <div class="product-badge">TIL REJSEN</div>
+                    <a href="produktside.html" aria-label="Beholder til dine sæbebare">
+                        <img src="image/rejsebeholder.png" alt="Sort beholder til sæbe" class="product-image">
+                    </a>
+                    <a href="produktside.html" class="product-link">
+                        <h2 id="product-4-title" class="product-title">Sort Rejsebeholder til sæbe produkter</h2>
+                    </a>
+                    <p class="product-description">Tag dine sæbebarer med på rejsen uden at det løber ud i tasken</p>
+                    <div class="product-rating">
+                        <span class="stars" role="img" aria-label="5 ud af 5 stjerner">★★★★★</span>
+                        <span class="rating-count">(41)</span>
+                    </div>
+                    <p class="product-price">45,00 kr.</p>
+                    <button type="button" class="add-to-bag-btn" aria-label="Tilføj Hyben Shampoo til kurv">TILFØJ TIL KURV</button>
+                </article>
+
+                <!-- Produkt 5 -->
+                <article class="product-item product-item-bottom" aria-labelledby="product-5-title">
+                    <div class="product-badge">MOD TØRT HÅR</div>
+                    <a href="produktside.html" aria-label="Se mere om produkt">
+                        <img src="image/havtornshampoo.jpg" alt="Havtorn Shampoo" class="product-image">
+                    </a>
+                    <a href="produktside.html" class="product-link">
+                        <h2 id="product-5-title" class="product-title">Havtorn Shampoo Bar - Mod tørt og krøllet hår</h2>
+                    </a>
+                    <p class="product-description">Shampoo med duft af havtorn, til tørt og krøllet hår</p>
+                    <div class="product-rating">
+                        <span class="stars" role="img" aria-label="5 ud af 5 stjerner">★★★★★</span>
+                        <span class="rating-count">(28)</span>
+                    </div>
+                    <p class="product-price">140,00 kr.</p>
+                    <button type="button" class="add-to-bag-btn" aria-label="tilføj havtorn shampoo til kurv">TILFØJ TIL KURV</button>
+                </article>
+
+                <!-- Produkt 6 -->
+                <article class="product-item product-item-bottom" aria-labelledby="product-6-title">
+                    <div class="product-badge">IRRITERET HOVEDBUND</div>
+                    <a href="produktside.html" aria-label="Se mere om produkt">
+                        <img src="image/rosmarinshampoo.jpg" alt="Rosmarin Shampoo Bar" class="product-image">
+                    </a>
+                    <a href="produktside.html" class="product-link">
+                        <h2 id="product-6-title" class="product-title">Rosmarin Shampoobar - Styrke til håret </h2>
+                    </a>
+                    <p class="product-description">Shampoo med duft af Rosmarin god mod hårtab og irritetet hovedbund</p>
+                    <div class="product-rating">
+                        <span class="stars" role="img" aria-label="5 ud af 5 stjerner">★★★★★</span>
+                        <span class="rating-count">(35)</span>
+                    </div>
+                    <p class="product-price">140,00 kr.</p>
+                    <button type="button" class="add-to-bag-btn" aria-label="Tilføj rosmarin shampoo bar til kurv">TILFØJ TIL KURV</button>
+                </article>
+
+                <!-- Produkt 7 -->
+                <article class="product-item product-item-bottom" aria-labelledby="product-7-title">
+                    <div class="product-badge">MOD TØRT HÅR</div>
+                    <a href="produktside.html" aria-label="Se mere om produkt">
+                        <img src="image/havtornbalsam.jpg" alt="Havtorn Balsam Bar" class="product-image">
+                    </a>
+                    <a href="produktside.html" class="product-link">
+                        <h2 id="product-7-title" class="product-title">Havtorm Balsam Bar - Mod Tørt Hår</h2>
+                    </a>
+                    <p class="product-description">Balsam med duft af havtorn til at blødgøre og bekæmpe tørt hår</p>
+                    <div class="product-rating">
+                        <span class="stars" role="img" aria-label="5 ud af 5 stjerner">★★★★★</span>
+                        <span class="rating-count">(52)</span>
+                    </div>
+                    <p class="product-price">145,00 kr.</p>
+                    <button type="button" class="add-to-bag-btn" aria-label="Tilføj produkt til kurv">TILFØJ TIL KURV</button>
+                </article>
+
+                <!-- Produkt 8 -->
+                <article class="product-item product-item-bottom" aria-labelledby="product-8-title">
+                    <div class="product-badge">SKADET HÅR</div>
+                    <a href="produktside.html" aria-label="Se mere om produkt">
+                        <img src="image/hybenshampoo.jpg" alt="Hyben Shampoo Bar" class="product-image">
+                    </a>
+                    <a href="produktside.html" class="product-link">
+                        <h2 id="product-8-title" class="product-title">Hyben Shampoo Bar - god til farvet hår</h2>
+                    </a>
+                    <p class="product-description">Shampoo med duft af hyben, god mod tørt, skadet og slidt hår </p>
+                    <div class="product-rating">
+                        <span class="stars" role="img" aria-label="5 ud af 5 stjerner">★★★★★</span>
+                        <span class="rating-count">(44)</span>
+                    </div>
+                    <p class="product-price">120,00 kr.</p>
+                    <button type="button" class="add-to-bag-btn" aria-label="Tilføj produkt til kurv">TILFØJ TIL KURV</button>
+                </article>
+            </div>
+        </section>
+
+     <section class="blog-section" aria-labelledby="blog-heading">
+    <h2 id="blog-heading" class="section-title">Blog posts</h2>
+    <div class="blog-grid">
+        <article class="blog-card">
+            <img src="image/phillip.png" alt="Mand med uren ud, der er forsvundet" class="blog-image">
+            <h3 class="blog-title">Ansigtsrens: Sådan kom Phillip af med uren hud – Her er hans simple rutine</h3>
+            <p class="blog-excerpt">Vores ansigtsrens til uren hud med aktivt kul er ikke bare naturlig, den er også utrolig effektiv mod akne. Hør Phillips oplevelse og kopier hans simple hudrutine.</p>
+            <a href="#" class="blog-link" aria-label="Læs mere om Ansigtsrens med Aktivt kul">Læs mere ></a>
+        </article>
+        
+        <article class="blog-card">
+            <img src="image/reshapewaste.jpg" alt="Zero waste sæbeholder" class="blog-image">
+            <h3 class="blog-title">Zero waste: Få mere ud af din sæbebar med denne stilrige og naturlige beholder</h3>
+            <p class="blog-excerpt">'Havblik' er vores nye sæbeholder til shampoo bar, balsam bar, sæbe bar, alle produkter i fastform osv. Den kan bruges overalt i huset og til mange formål.</p>
+            <a href="#" class="blog-link" aria-label="Læs mere om Zero waste sæbeholder">Læs mere ></a>
+        </article>
+        
+        <article class="blog-card">
+            <img src="image/mewalii.jpg" alt="Kystnær produkter i kurv" class="blog-image">
+            <h3 class="blog-title">Quiz: Hvilke ingredienser løser dit hud- eller hårproblem? Find ud af det her</h3>
+            <p class="blog-excerpt">Fedtet eller tør hud? Hårtab eller for meget fylde? Uanset hvad dit problem er, har naturen en løsning til dig. Tag vores quiz og find ud af, hvilke ingredienser ...</p>
+            <a href="#" class="blog-link" aria-label="Læs mere om ingredienser quiz">Læs mere ></a>
+        </article>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+    <div class="newsletter-container">
+        <div class="newsletter-content">
+            <h2>Få 10 % rabat på dit første køb</h2>
+            <p>Tilmeld dig vores nyhedsbrev og få en rabatkode på 10 % til dit første køb. Du bliver også den første til at modtage tilbud, nyheder og tips til hud- og hår.</p>
+        </div>
+        <form class="newsletter-form-inline" aria-label="Tilmeld nyhedsbrev">
+            <input type="email" id="newsletter-email-inline" name="email" placeholder="Din email ..." aria-label="E-mail adresse" required>
+            <button type="submit">Tilmeld</button>
+        </form>
+    </div>
+</section>
+    </main>
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+    <h2>Kystnær</h2>
+    <p>Håndlavede shampoo- og sæbebarer fra den danske kyst.</p>
+    <p>Ørbyhage 96<br>6100 Haderslev</p>
+    <p>Tlf: +45 71 72 31 91<br>
+    <a href="mailto:kontakt@kystnaer.com">kontakt@kystnaer.com</a></p>
+</div>
+        
+        <div class="footer-section">
+            <h2>Produkter</h2>
+            <nav aria-label="Produktnavigation">
+                <a href="#">Shampoobarer</a>
+                <a href="#">Balsambarer</a>
+                <a href="#">Sæbebarer</a>
+                <a href="#">Baberingsbarer</a>
+                <a href="#">Tilbehør</a>
+                <a href="#">Pakker</a>
+            </nav>
+        </div>
+        
+        <div class="footer-section">
+            <h2>Information</h2>
+            <nav aria-label="Informationsnavigation">
+                <a href="#">Om Kystnær</a>
+                <a href="#">Find forhandler</a>
+                <a href="#">Bliv forhandler</a>
+                <a href="#">B2B Login</a>
+                <a href="#">Levering- og handelsbetingelser</a>
+                <a href="#">Persondatapolitik</a>
+                <a href="#">LAG og kommisionen</a>
+            </nav>
+        </div>
+        
+        <div class="footer-section">
+            <h2>Følg os</h2>
+            <nav aria-label="Sociale medier">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Youtube</a>
+                <a href="#">Blog</a>
+                <a href="#">Nyhedsbrev</a>
+            </nav>
+        </div>
+    </div>
+        <div class="footer-bottom">
+            <p>© 2025 Kystnær. Alle rettigheder forbeholdes. | CVR: XXXXXXXX</p>
+        </div>
+    </footer>
+
+    <!-- Link til JavaScript -->
+    <script src="js/slider.js"></script>
+</body>
+</html>
